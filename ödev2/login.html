@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <style>
+      .image{
+        background-image: url(istockphoto-1372472135-1024x1024.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>   
+    <script>
+      function Kullanıcı(form){
+        var mail=form.email.value;
+        var sifre=form.password.value;
+        if(mail=="kullanici@mail.com" && sifre=="1234" ){
+          window.alert("Basarili Giris")
+          //window.location="file:///C:/Users/eaydo/OneDrive/Masa%C3%BCst%C3%BC/HTML%20Kodlar%C4%B1/%C3%B6dev2/kullan%C4%B1c%C4%B1anasayfa.html"
+          window.location="kullanıcıanasayfa.html"
+        }
+        else{
+          window.alert("Basarisiz Giris")
+        }
+      }
+
+
+      function Firma(form){
+        var mail=form.email.value;
+        var sifre=form.password.value;
+        if(mail=="firma@mail.com" && sifre=="1234" ){
+          window.alert("Basarili Giris")
+          //window.location="file:///C:/Users/eaydo/OneDrive/Masa%C3%BCst%C3%BC/HTML%20Kodlar%C4%B1/%C3%B6dev2/deneme.html"
+          window.location="firma_anasayfa.html"
+        }
+        else{
+          window.alert("Basarisiz Giris")
+        }
+      }
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 image vh-100"></div>
+        <div class="col-lg-6 d-flex justify-content-center align-items-center">
+          <div class="w-50">
+            <h3>Sikayetimvar sitesine hosgeldiniz</h3>
+            <p class="mb-5">Bilgilerinizle giris yapınız</p>
+
+            <div class="d-grid gap-3">
+              <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=ASKXGp2o2bxVCkYrB51xC8645kKI4pDdnOYD-FJafAMX3D2rVgAxUCcNjeB446vy8sPbGG6uXLvh9w&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2029723362%3A1702812988664529&theme=glif" class="btn btn-light bg-white py-3 shadow-sm"><i class="bi bi-google"></i> Google ile Bağlan</a>
+              <a href="https://www.facebook.com/" class="btn btn-light bg-white py-3 shadow-sm"><i class="bi bi-facebook"></i> Facebook ile Bağlan</a>
+            </div>
+
+            <hr class="my-5">
+            
+            <form action="" name="form">
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="mailinput" placeholder="name@example.com" name="email">
+                <label for="floatingInput">Email adresi</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="passwordinput" placeholder="Password" name="password">
+                <label for="floatingPassword">Sifre</label>
+              </div>
+              
+              <div class="form-check float-start">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Beni Hatırla
+                </label>
+              </div>
+
+              <a style="color: darkslategrey;" href="#" class="float-end">Sifremi Unuttum</a>
+              <div class="clearfix mb-5"></div>
+              <a href="#kullanıcıanasayfa.html" type="submit" class="btn btn-secondary w-100 py-3" value="Kullanıcı Girisi" onclick="Kullanıcı(form)">Kullanıcı Girisi</a>
+              <a href="#deneme.html" style="margin-top: 20px;" type="submit" class="btn btn-secondary w-100 py-3" value="Firma Girisi" onclick="Firma(form)">Firma Girisi</a>
+              
+              <p>Hesabınız yokmu? <a style="color: rgb(101, 88, 88);" href="signin.html">Birtane oluşturun</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

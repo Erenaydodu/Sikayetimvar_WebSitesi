@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Firma Sayfası</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+   
+    .row.content {height:3000px;}
+ 
+   
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+   
+   
+ 
+   
+   
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;}
+    }
+  </style>
+ 
+  <script>
+    $(document).ready(function(){
+ 
+    $(".deleteButton").click(function(){      
+        $(this).closest('.şikayetler').remove();
+    });
+ 
+    $(".cevaplabutton").click(function(){
+       
+        var parentDiv = $(this).closest('.şikayetler');
+ 
+       
+        var inputValue = parentDiv.find('.cevapla_değer').val();
+ 
+       
+        parentDiv.append("<br><br><p><b>Firmanın Cevabı:</b>  " + inputValue + "</p>");
+ 
+        parentDiv.find('.cevapla_değer, .cevaplabutton').remove();
+    });
+ 
+});
+ 
+  </script>
+</head>
+<body>
+ 
+<div  class="container-fluid">
+  <div style="height: 100%;" class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>Şikayetimvar</h4>
+      <br><br>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a style="background-color: grey;" href="firma_anasayfa.html">Ana Sayfa</a></li>
+        <br><br>
+        <li class="active"><a style="background-color: grey;" href="firma_profil.html">Profil Bilgisi</a></li>
+        <br><br>      
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Şikayetler içinde ara..." id="aramabutonu">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+ 
+    <div style="height: 100%; background-image: url(istockphoto-1372472135-1024x1024.jpg) ; background-repeat: no-repeat; background-size: cover; background-position: center; text-align: center;" class="col-sm-9 ">
+        <div class="şikayetler">
+            <hr>
+            <h2>Trafik Cezası</h2>
+            <h5></p><span class="glyphicon glyphicon-user"></span> Musa Kaya, <span class="glyphicon glyphicon-time"></span> 15.12.2023</h5>
+            <h5><span class="glyphicon glyphicon-lock"></span> Firma <span class="label label-danger">Çözülmedi</span></h5><br>
+ 
+            <p>2022 kasım ayında yazılan trafik cezası 2023 çıkarılan 2000 lira altı cezaların iptal olacağını belirten kanuna rağmen iptal olmuyor. Devlet kanunu kendisi çıkarıyor ve yine kendisi bu kanuna uymuyor. CİMER ® de hikaye oraya da yazdım ama tatmin edici bir netice çıkmadı. İlla 400 liralık borç için 10000 lira masraf ettirip, mahkemeye başvuru yaptırıp pire için yorgan yaktıracak.</p>
+            <input type="text" class="cevapla_değer well-sm"><button class="cevaplabutton btn btn-success"><span class="glyphicon glyphicon-comment"></span> Cevapla</button>
+            <button class="deleteButton btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Kaldır</button>
+        </div>
+        <br><br>
+        <div class="şikayetler">
+            <hr>
+            <h2>Komisyon Rezaleti</h2>
+            <h5></p><span class="glyphicon glyphicon-user"></span> Eren Aydoğdu, <span class="glyphicon glyphicon-time"></span> 11.10.2023</h5>
+            <h5><span class="glyphicon glyphicon-lock"></span> Firma <span class="label label-success">Çözüldü</span></h5><br>
+            <p>Esenboğa Havalimanı giden yolcu katındaki sima turizm taşımacılık ltd şti adlı firmanın işlettiği tekel büfesinden kredi kartıyla sigara alınca 5₺komisyon talep etti. Ayrıca aldığı komisyona da KDV dahil diye slip te belirtmiş. 5464 sayılı banka kartları ve kredi kartları kanunu'nun 17. Maddesine göre hiçbir üye iş yeri böyle bir talepte bulunamaz.</p>
+            <input type="text" class="cevapla_değer well-sm"><button class="cevaplabutton btn btn-success"><span class="glyphicon glyphicon-comment"></span> Cevapla</button>
+            <button class="deleteButton btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Kaldır</button>
+        </div>
+        <br><br>
+        <div class="şikayetler">
+            <hr>
+            <h2>Kredi Kartı Basvuru Sorunu</h2>
+            <h5></p><span class="glyphicon glyphicon-user"></span> Feyyaz Tanrıverdi, <span class="glyphicon glyphicon-time"></span> 11.10.2023</h5>
+            <h5><span class="glyphicon glyphicon-lock"></span> Firma <span class="label label-success">Çözüldü</span></h5><br>
+            <p>02/12/2023 tarihinde kredi kartı başvurusunda bulundum ancak 29/12/2023 tarihinde kartım, belirtmiş olduğum adresten farklı bir adrese bırakılmıştır. Kartım kurye tarafından teslim edildiğinde tüm özellikleri, temassız ödeme ve internet alışverişi için aktif haldeydi. Kuryenin bıraktığı adreste kartımı alabilmem mümkün olmadığı için mağduriyet yaşamaktayım. Adres konusunda tarafıma danışılmadan keyfi bir şekilde hareket edildikleri için VakıfBank ve ilgili personel hakkında şikayetçi olmaktayım. Bırakılan adresteki banka şubesindeki personellerle aramda husumet bulunması sebebiyle, kartımın bana sorulmadan oraya bırakılması mağduriyetimi daha da artırmıştır.</p>
+            <input type="text" class="cevapla_değer well-sm"><button class="cevaplabutton btn btn-success"><span class="glyphicon glyphicon-comment"></span> Cevapla</button>
+            <button class="deleteButton btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Kaldır</button>
+        </div>
+        <br><br>
+        <div class="şikayetler">
+            <hr>
+            <h2>Hepsiburada Kiwi Kbaby 55</h2>
+            <h5></p><span class="glyphicon glyphicon-user"></span> Melek Şans, <span class="glyphicon glyphicon-time"></span> 11.10.2023</h5>
+            <h5><span class="glyphicon glyphicon-lock"></span> Firma <span class="label label-success">Çözüldü</span></h5><br>
+            <p>Kiwi KBaby 55 şarj edilebilir göğüs pompası satın aldım. Ancak ördek gagasını andıran kısımları yırtıldı ve yedek uç bulamıyorum. Verdiğim para boşa gitti ve çalışan bir anne olarak süt sağmam zorunlu. Hepsiburada satıcısı da ürünü kaldırmış, kimseye ulaşamıyorum.</p>
+            <input type="text" class="cevapla_değer well-sm"><button class="cevaplabutton btn btn-success"><span class="glyphicon glyphicon-comment"></span> Cevapla</button>
+            <button class="deleteButton btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Kaldır</button>
+          </div>
+        <br><br>
+        <div class="şikayetler">
+            <hr>
+            <h2>SGK EYT Emeklilik Bilgisi</h2>
+            <h5></p><span class="glyphicon glyphicon-user"></span> Hasan Kasa, <span class="glyphicon glyphicon-time"></span> 11.10.2023</h5>
+            <h5><span class="glyphicon glyphicon-lock"></span> Firma <span class="label label-success">Çözüldü</span></h5><br>
+            <p>Merhabalar bir ricada bulunmak istiyoruz kimseye ulaşamıyoruz sizce normal mi? Yani oradaki görevliler oraya niye seçildi oraya gelip de meşgul etsek daha mı iyi olur. Ufacık şey için başkalarının hakkına girmemiş orayı boş bırakmış oluruz sayın müdürüm teşekkürler.</p>
+            <input type="text" class="cevapla_değer well-sm"><button class="cevaplabutton btn btn-success"><span class="glyphicon glyphicon-comment"></span> Cevapla</button>
+            <button class="deleteButton btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Kaldır</button>
+        </div>
+        <br><br>
+        <div class="şikayetler">
+            <hr>
+            <h2>QNB Finansbank 5 Yıldır Kapanmayan Avukatlık Kaydı Sorunu</h2>
+            <h5></p><span class="glyphicon glyphicon-user"></span> Eslem Muş, <span class="glyphicon glyphicon-time"></span> 11.10.2023</h5>
+            <h5><span class="glyphicon glyphicon-lock"></span> Firma <span class="label label-success">Çözüldü</span></h5><br>
+            <p>5 yıl önce QNB'den avukatlık olmuştum, kapatılalı 5 yıl oldu ama hala görünüyor. Nasıl silinmediğini anlayamadım, bu yüzden notum yükselmiyor. 5 yıl geçmesine rağmen neden hala aynı şekilde görünüyor ve üstelik yeni yıla girmemize rağmen hala görünüyor. Lütfen gereğini yapın.</p>
+            <input type="text" class="cevapla_değer well-sm"><button class="cevaplabutton btn btn-success"><span class="glyphicon glyphicon-comment"></span> Cevapla</button>
+            <button class="deleteButton btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Kaldır</button>
+        </div>
+        <br><br>
+        <div class="şikayetler">
+            <hr>
+            <h2>Anadolu Hayat Emeklilik Para İadesi Alma</h2>
+            <h5></p><span class="glyphicon glyphicon-user"></span> Kudret Eskicioğlu, <span class="glyphicon glyphicon-time"></span> 11.10.2023</h5>
+            <h5><span class="glyphicon glyphicon-lock"></span> Firma <span class="label label-success">Çözüldü</span></h5><br>
+            <p>Otomatik katılım işlemini iptal ettikten sonra para iadesi yapılmadı ve bu işlemi 30 gündür gerçekleştirmiş bulunmaktayım. E-Devlet'te gördüğüm kadarıyla 'işlemde' olarak gözükmektedir. Sizlerin bu konu hakkında olaya el atmanızı rica ederim. Şimdiden teşekkürler.</p>
+            <input type="text" class="cevapla_değer well-sm"><button class="cevaplabutton btn btn-success"><span class="glyphicon glyphicon-comment"></span> Cevapla</button>
+            <button class="deleteButton btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Kaldır</button>
+        </div>
+        <br><br>
+        <div class="şikayetler">
+            <hr>
+            <h2>Halkbank Mobil Uygulamasında Şifre Yenileme Zorluğu</h2>
+            <h5></p><span class="glyphicon glyphicon-user"></span> Avni Erdoğan, <span class="glyphicon glyphicon-time"></span> 11.10.2023</h5>
+            <h5><span class="glyphicon glyphicon-lock"></span> Firma <span class="label label-success">Çözüldü</span></h5><br>
+            <p>Halkbank'tan alamadığım dijital parola yenileme hizmeti gerçekten problemli. Telefonumu yenilemem gerekiyor ya da şubeye gitmem gerektiğini söylüyorlar. Şubede bir işlem yapmak yarım saat sürüyor. Basit bir şifre yenileme işlemi için bu kadar zaman harcanması ve bu kadar zorluk çekilmesi güvenlik adına yapılan bir işlem olsa da kullanıcı deneyimini olumsuz etkiliyor.</p>
+            <input type="text" class="cevapla_değer well-sm"><button class="cevaplabutton btn btn-success"><span class="glyphicon glyphicon-comment"></span> Cevapla</button>
+            <button class="deleteButton btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Kaldır</button>
+        </div>
+        <br><br>
+        <div class="şikayetler">
+            <hr>
+            <h2>Superonline İnternet Hizmetlerinde Yeniden Hızlandırma Ücreti Tartışması</h2>
+            <h5></p><span class="glyphicon glyphicon-user"></span> Kudret Eskicioğlu, <span class="glyphicon glyphicon-time"></span> 11.10.2023</h5>
+            <h5><span class="glyphicon glyphicon-lock"></span> Firma <span class="label label-success">Çözüldü</span></h5><br>
+            <p>Superonline, ödeme gecikmesi halinde 'yeniden hızlandırma bedeli' adı altında yasal olmayan bir bedel talep ediyor. Bu bedelin neye göre belirlendiği ve nasıl bir hizmet sunduğu belirsizdir ve bu bedelin tahsil edilmesi haksız kazançtır. 160 TL olarak faturama yansıtılmıştır. Bu uygulama haksız bir kazanç sağlamaktan başka bir şey değildir. Gecikme halinde gecikme faizi yasal olmasına karşın, 'yeniden hızlandırma bedeli'nin yasal bir dayanağı bulunmamaktadır ve tüketici haklarıyla da örtüşmemektedir. Buna ilişkin sözleşmede bir düzenleme bulunsa bile bu tür sözleşmeler Genel İşlem Şartları'ndan sayıldığı için aleyhe olan hususlar kanunen geçersiz kabul edilmektedir. Bu hukuksuz uygulamanın düzeltilmesini, yani ödenen ücretin iadesini ve yeni faturadaki ücretin iptalini talep ediyorum. Aksi takdirde Tüketici Hakem Heyeti'ne ve gerektiğinde mahkemeye başvuracağım.</p>
+            <input type="text" class="cevapla_değer well-sm"><button class="cevaplabutton btn btn-success"><span class="glyphicon glyphicon-comment"></span> Cevapla</button>
+            <button class="deleteButton btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Kaldır</button>
+        </div>
+        <br><br>
+        <div class="şikayetler">
+            <hr>
+            <h2>TEB KMH Başvuru Sorunu</h2>
+            <h5></p><span class="glyphicon glyphicon-user"></span> Eren Aydoğdu, <span class="glyphicon glyphicon-time"></span> 11.10.2023</h5>
+            <h5><span class="glyphicon glyphicon-lock"></span> Firma <span class="label label-success">Çözüldü</span></h5><br>
+            <p>TEB bankası ile yıllardır çalışırım. KMH başvurusu yaptığımda hiçbir şekilde olumlu olumsuz dönüş alamıyorum. Bu sebeple diğer bankalara başvuramıyorum. Sistem çok yavaş işliyor. KMH başvurumun olumlu ya da olumsuz geri dönüş bekliyorum. Hiçbir şekilde şube personeline de ulaşamıyorum.</p>
+            <input type="text" class="cevapla_değer well-sm"><button class="cevaplabutton btn btn-success"><span class="glyphicon glyphicon-comment"></span> Cevapla</button>
+            <button class="deleteButton btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Kaldır</button>
+        </div>
+        <br><br>
+ 
+    </div>
+  </div>
+</div>
+ 
+<script>
+    $(document).ready(function(){
+      $("#aramabutonu").on("keyup", function() {
+        var aranan = $(this).val().toLowerCase();
+        $(".şikayetler").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(aranan) > -1)
+        });
+      });
+    });
+    </script>
+</body>
+</html>
